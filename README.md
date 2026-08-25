@@ -28,16 +28,18 @@ Before compiling the code you wrote, configure which pins you want to connect yo
 
 **1. Define your pins in the enumerator:**
 This is for controlling the servos individually
-
+```c
 typedef enum {
     RB0_pin = 0,RB1_pin = 1,num_servos
 } servo_pin_t;
+```
 
-**2. 2. Define the hardware control registers::**
+**2. Define the hardware control registers::**
+```c
 #define IO_RB0 TRISBbits.RB0
 #define RB0_value LATBbits.LATB0
 
 #define IO_RB1 TRISBbits.RB1
 #define RB1_value LATBbits.LATB1
-
+```
 See the main.c code for more reference
